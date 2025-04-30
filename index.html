@@ -5,14 +5,28 @@
   <title>Weekly Graphic</title>
   <style>
     html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: transparent !important;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background: transparent;
-      height: 100%;
+      border: 0;
+      vertical-align: top;
     }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     img {
       display: block;
-      margin: 0 auto;
       max-width: 100%;
       height: auto;
     }
