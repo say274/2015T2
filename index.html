@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <title>Weekly Graphic</title>
   <style>
-    body {
+    html, body {
+      background: transparent;
+      margin: 0;
+      padding: 0;
       text-align: center;
       font-family: sans-serif;
-      padding: 40px;
-      background-color: transparent;
-      margin: 0;
     }
     img {
       max-width: 90%;
@@ -18,11 +18,9 @@
   </style>
 </head>
 <body>
-
   <img id="weeklyImage" src="" alt="Weekly Graphic">
-
   <script>
-    const startDate = new Date('2025-04-26'); // Week 1 starts on April 26
+    const startDate = new Date('2025-04-26');
     const today = new Date();
     const msPerDay = 24 * 60 * 60 * 1000;
     const dayDiff = Math.floor((today - startDate) / msPerDay);
@@ -40,9 +38,8 @@
       9: '9.png'
     };
 
-    const imagePath = imageMap[weekNumber] || '1.png'; // fallback to week 1 if out of range
+    const imagePath = imageMap[weekNumber] || '1.png';
     document.getElementById('weeklyImage').src = imagePath;
   </script>
-
 </body>
 </html>
