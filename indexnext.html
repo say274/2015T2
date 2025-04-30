@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly Graphic</title>
+  <style>
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: transparent !important;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: top;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <img id="weeklyImage" src="" alt="Weekly Graphic">
+  <script>
+    const startDate = new Date('2025-04-26');
+    const today = new Date();
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const dayDiff = Math.floor((today - startDate) / msPerDay);
+    const weekNumber = Math.floor(dayDiff / 7) + 1;
+
+    const imageMap = {
+      1: '2.png',
+      2: '3.png',
+      3: '4.png',
+      4: '5.png',
+      5: '6.png',
+      6: '7.png',
+      7: '8.png',
+      8: '9.png',
+    };
+
+    const imagePath = imageMap[weekNumber] || '1.png';
+    document.getElementById('weeklyImage').src = imagePath;
+  </script>
+</body>
+</html>
