@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly Graphic</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+    img {
+      max-width: 90%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>This Week</h1>
+  <img id="weeklyImage" src="" alt="Weekly Graphic">
+
+  <script>
+    const startDate = new Date('2025-04-26'); // Week 1 starts on April 26
+    const today = new Date();
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const dayDiff = Math.floor((today - startDate) / msPerDay);
+    const weekNumber = Math.floor(dayDiff / 7) + 1;
+
+    const imageMap = {
+      1: '1.png',
+      2: '2.png',
+      3: '3.png',
+      4: '4.png',
+      5: '5.png',
+      6: '6.png',
+      7: '7.png',
+      8: '8.png',
+      9: '9.png'
+    };
+
+    const imagePath = imageMap[weekNumber] || 'KnoxRavo.png'; // fallback image
+    document.getElementById('weeklyImage').src = imagePath;
+  </script>
+
+</body>
+</html>
