@@ -33,10 +33,12 @@
   </style>
 </head>
 <body>
-  <img id="weeklyImage" src="">
+  <img id="weeklyImage" src="" alt="test">
   <script>
-    const startDate = new Date('2025-07-21');
+    const startDate = new Date('2025-07-20'); // Set your correct start date
     const today = new Date();
+    today.setHours(0, 0, 0, 0); // Normalize to midnight to avoid DST/timezone issues
+
     const msPerDay = 24 * 60 * 60 * 1000;
     const dayDiff = Math.floor((today - startDate) / msPerDay);
     const weekNumber = Math.floor(dayDiff / 7) + 1;
@@ -50,11 +52,11 @@
       6: '6.png',
       7: '7.png',
       8: '8.png',
-      9: '9.png'
+      9: '9.png',
       10: '10.png',
     };
 
-    const imagePath = imageMap[weekNumber] || '1.png';
+    const imagePath = imageMap[weekNumber] || '1.png'; // fallback
     document.getElementById('weeklyImage').src = imagePath;
   </script>
 </body>
