@@ -35,7 +35,7 @@
 <body>
   <img id="weeklyImage" src="" alt="Weekly Graphic">
   <script>
-    const startDate = new Date('2025-07-14'); // Set your correct start date
+    const startDate = new Date('2025-07-07'); // Set your correct start date
     const today = new Date();
     today.setHours(0, 0, 0, 0); // Normalize to midnight to avoid DST/timezone issues
 
@@ -55,7 +55,7 @@
       9: '10.png',
     };
 
-    const imagePath = imageMap[weekNumber] || '1.png'; // fallback
+    const imagePath = imageMap[weekNumber + 1] || '1.png'; // fallback
     document.getElementById('weeklyImage').src = imagePath;
   </script>
 </body>
