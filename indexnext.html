@@ -41,6 +41,50 @@
     const dayDiff = Math.floor((today - startDate) / msPerDay);
     const weekNumber = Math.floor(dayDiff / 7) + 1;
 
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly Graphic</title>
+  <style>
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: transparent !important;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: top;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <img id="weeklyImage" src="">
+  <script>
+    const startDate = new Date('2025-07-14');
+    const today = new Date();
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const dayDiff = Math.floor((today - startDate) / msPerDay);
+    const weekNumber = Math.floor(dayDiff / 7) + 1;
+
     const imageMap = {
       1: '2.png',
       2: '3.png',
@@ -58,3 +102,5 @@
   </script>
 </body>
 </html>
+
+
