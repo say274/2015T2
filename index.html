@@ -35,7 +35,7 @@
 <body>
   <img id="weeklyImage" src="" alt="Weekly Graphic">
   <script>
-    const startDate = new Date('2025-04-26');
+    const startDate = new Date('2025-07-21');
     const today = new Date();
     const msPerDay = 24 * 60 * 60 * 1000;
     const dayDiff = Math.floor((today - startDate) / msPerDay);
@@ -51,6 +51,7 @@
       7: '7.png',
       8: '8.png',
       9: '9.png'
+      10: '10.png',
     };
 
     const imagePath = imageMap[weekNumber] || '1.png';
